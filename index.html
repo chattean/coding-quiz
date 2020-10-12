@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Coding Challenge: Do you have what it takes?</title>
+    <link rel="stylesheet" href="./assets/css/stylesheet.css">
+
 </head>
 <body>
     <div class="container">
-        <h1 class="welcome">Are you ready?</h1>
-        <button id="start">Start</button>
-        <h2 id="countdown"></h2>
-        <div id="questions"></div>
-        <div id="answers"></div>
-
+        <h1 class="welcome">Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit<br />
+            Keep in mind that incorrect answers will penalize your score/time <br />
+            by ten seconds!
+        </p>
+        <button id="start">Start Quiz</button>
+        <div id="quiz" style="display: none;">
+            <div id="questions"></div>
+            <div id="choices">
+                <div class="choice" id="choice1" onclick="validateAnswer('choice1')"></div>
+                <div class="choice" id="choice2" onclick="validateAnswer('choice2')"></div>
+                <div class="choice" id="choice3" onclick="validateAnswer('choice3')"></div>
+                <div class="choice" id="choice4" onclick="validateAnswer('choice4')"></div>
+            </div>
+        </div>
+        <div id="countdown"></div>
+        <div id="score" style="display: none;"></div>  
       </div>
     <script src = "./assets/scripts/script.js"></script>
 </body>

@@ -8,24 +8,40 @@
 
 </head>
 <body>
+    <!-- main container -->
     <div class="container">
-        <h1 class="welcome">Coding Quiz Challenge</h1>
-        <p>Try to answer the following code-related questions within the time limit<br />
-            Keep in mind that incorrect answers will penalize your score/time <br />
-            by ten seconds!
-        </p>
-        <button id="start">Start Quiz</button>
+        <!-- Title page -->
+        <div id="start">
+            <h1 class="welcome">Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit<br />
+                Keep in mind that incorrect answers will penalize your score/time <br />
+                by ten seconds!
+            </p>
+            <!-- Start quiz button -->
+            <button id="startbtn">Start Quiz</button>
+        </div>
+        <!-- timer -->
+        <div id="countdown"></div>
+        <!-- quiz div -->
         <div id="quiz" style="display: none;">
+            <!-- questions  -->
             <div id="questions"></div>
+            <!-- answer choices -->
             <div id="choices">
-                <div class="choice" id="choice1" onclick="validateAnswer('choice1')"></div>
-                <div class="choice" id="choice2" onclick="validateAnswer('choice2')"></div>
-                <div class="choice" id="choice3" onclick="validateAnswer('choice3')"></div>
-                <div class="choice" id="choice4" onclick="validateAnswer('choice4')"></div>
+                <p><button class="choice" id="choice1" onclick="validateAnswer('choice1')"></button></p>
+                <p><button class="choice" id="choice2" onclick="validateAnswer('choice2')"></button></p>
+                <p><button class="choice" id="choice3" onclick="validateAnswer('choice3')"></button></p>
+                <p><button class="choice" id="choice4" onclick="validateAnswer('choice4')"></button></p>
             </div>
         </div>
-        <div id="countdown"></div>
-        <div id="score" style="display: none;"></div>  
+        <!-- tells the user right or wrong -->
+        <div id = "answerStatus"></div>
+        <!-- Enter score form -->
+        <div id="score" style="display: none;">
+        <p>
+            Your Score is <span id = high-score></span>
+        </p>
+        </div>  
       </div>
     <script src = "./assets/scripts/script.js"></script>
 </body>

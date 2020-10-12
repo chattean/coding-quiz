@@ -8,6 +8,7 @@ This Coding quiz will test you knowlegde about JavaScript. You will have to answ
 <ul>
     <li>HTML</li>
     <li>JavaScript</li>
+    <li>CSS</li>
 </ul>
 
 ## Screenshot

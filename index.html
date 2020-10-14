@@ -11,17 +11,21 @@
     <!-- main container -->
     <div class="container">
         <!-- Title page -->
-        <div id="start">
+        <div id="start" style="display: none;">
             <h1 class="welcome">Coding Quiz Challenge</h1>
             <p>Try to answer the following code-related questions within the time limit<br />
                 Keep in mind that incorrect answers will penalize your score/time <br />
                 by ten seconds!
             </p>
             <!-- Start quiz button -->
-            <button id="startbtn">Start Quiz</button>
+            <button id="startbtn" class = startbtn>Start Quiz</button>
+        </div>
+        <div id="highScoreLink" style="display: none;">
+            <a href="#highScorePage">View High Score</a>
         </div>
         <!-- timer -->
         <div id="countdown"></div>
+        <div id="timerPause" style="display: none;"></div>
         <!-- quiz div -->
         <div id="quiz" style="display: none;">
             <!-- questions  -->
@@ -34,15 +38,31 @@
                 <p><button class="choice" id="choice4" onclick="validateAnswer('choice4')"></button></p>
             </div>
         </div>
+         <!-- Enter score form -->
+        <div id="score" style="display: none;">
+            <p>
+                Your Score is <span id = high-score></span>.<br />
+                <form id ="highScoreForm">
+                    <label for = "initials">Enter initials: </label>
+                    <input type="text" id ="initials" name="initials"></input>
+                    <button type="submit" id="submitBtn" onclick="renderScore()">Submit</button>
+                </form>
+            </p>
+        </div>  
+         <!-- High Score Page -->
+         <div id = "highScorePage" style="display: none;">
+            <p> Welcome to the high score page</p>
+            <p> Here are the high scores</p>
+            <div id ="listOfHighScores">
+                <div id = "listOfInitials">Initials</div>
+                <div id = "listOfScores" style = "display:inline;">Scores</div>
+            </div>
+
+            <p><button id="startbtn2">Start Over</button></p>
+        </div>
         <!-- tells the user right or wrong -->
         <div id = "answerStatus"></div>
-        <!-- Enter score form -->
-        <div id="score" style="display: none;">
-        <p>
-            Your Score is <span id = high-score></span>
-        </p>
-        </div>  
-      </div>
+    </div>
     <script src = "./assets/scripts/script.js"></script>
 </body>
 </html>
